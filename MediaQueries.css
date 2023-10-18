@@ -1,0 +1,316 @@
+@media screen and (max-width: 900px) and (min-width: 500px) {
+  section.contact-me {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin: 100px 0;
+    padding: 0;
+  }
+  div.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    height: 100%;
+    /* height: 90vh; */
+    background-color: black;
+  }
+  div.contact-form h1 {
+    font-size: 25px;
+    color: var(--accent-color-red);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  div.contact-form h2 {
+    font-size: 16px;
+    color: white;
+    font-weight: unset;
+
+    margin: 10px 0;
+  }
+  div.contact-form div.image-container {
+    display: flex;
+    height: 500px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  div.contact-form div.image-container img {
+    position: relative;
+    left: 70px;
+  }
+  div.contact-form form {
+    padding-top: 100px;
+  }
+  div.contact-form form input {
+    background-color: transparent;
+    width: clamp(180px, 90vw, 500px);
+    height: 40px;
+  }
+  div.contact-form form textarea {
+    width: clamp(200px, 90vw, 500px);
+  }
+}
+@media screen and (max-width: 785px) {
+  .photography div:nth-child(2) {
+    grid-column: 1/1;
+  }
+  .photography div:nth-child(4) {
+    grid-row: 3/4;
+    grid-column: 3;
+  }
+  div.photography {
+    place-content: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    margin: 0 100px;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 771px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+  }
+  ul {
+    gap: 4vw;
+  }
+  main {
+    background-image: url("images/phone/Desktop---red-phone.webp");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  div.tech-stack-wrapper .skills-info:nth-of-type(4) {
+    position: absolute;
+
+    left: 60px;
+  }
+  div.tech-stack-wrapper .skills-info:nth-of-type(5) {
+    position: absolute;
+
+    left: 110px;
+  }
+  div.tech-stack-wrapper .skills-info:nth-of-type(4):before {
+    left: 135px;
+  }
+  div.tech-stack-wrapper .skills-info:nth-of-type(5):before {
+    left: 145px;
+  }
+}
+@media screen and (max-width: 611px) {
+  section.about-me div.bio-picture {
+    width: 292px;
+    height: 292px;
+    flex-shrink: 0;
+    border: 6px solid #72858b;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .about-me div h2 {
+    color: #d66f95;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+  }
+  .about-me .bio-picture span {
+    position: relative;
+    height: 40px;
+    width: 100vw;
+    margin-bottom: 150px;
+  }
+  .about-me div h3 {
+    color: #fff;
+    font-family: Gilroy;
+    font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    font-family: "Raleway", sans-serif;
+    position: absolute;
+    margin-bottom: 0;
+    letter-spacing: 5px;
+  }
+  section.about-me .bio-picture img {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    top: -40px;
+  }
+  .about-me p {
+    margin-top: 70px;
+    font-family: "Raleway", sans-serif;
+    max-width: 90vw;
+    text-align: justify;
+    line-height: 30px;
+  }
+  div.tech-stack-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.tech-stack-wrapper span.title {
+    width: unset;
+    border: none;
+    border-bottom: 2px solid var(--accent-color-red);
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.black-background::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    z-index: -1;
+  }
+  nav {
+    justify-content: space-between;
+    z-index: 1000;
+    transition: 0.4s ease-in-out;
+  }
+  nav.background-color-change {
+    background-color: black;
+    transition: 0.4s;
+  }
+  nav ul.menu {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    height: 90vh;
+    top: 54px;
+    left: 0px;
+    padding: 0;
+    z-index: -99;
+    left: -100%;
+    transition: 0.4s;
+  }
+  nav ul.menu li {
+    margin-bottom: 40px;
+  }
+  nav ul.menu a {
+    margin: 0;
+  }
+  nav a.contact-me {
+    box-shadow: 6px 6px var(--accent-color-red);
+  }
+  nav ul.menu-active {
+    left: 0;
+  }
+  nav span {
+    display: block;
+    margin-right: 30px;
+    width: fit-content;
+    height: fit-content;
+  }
+  nav span i {
+    font-size: 30px;
+    color: white;
+  }
+}
+@media screen and (max-width: 530px) {
+  div.photography {
+    place-content: center;
+    max-width: 1111px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0px;
+
+    gap: 10px;
+    align-items: center;
+  }
+  div.photography div {
+    height: 250px;
+  }
+  div.photography img {
+    width: 250px;
+  }
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  background-color: #000000;
+}
+
+@media screen and (max-width: 500px) {
+  section.contact-me {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin: 100px 0;
+    padding: 0;
+  }
+  div.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    height: 100%;
+    /* height: 90vh; */
+    background-color: black;
+  }
+  div.contact-form h1 {
+    font-size: 25px;
+    color: var(--accent-color-red);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  div.contact-form h2 {
+    font-size: 16px;
+    color: white;
+    font-weight: unset;
+
+    margin: 10px 0;
+    width: 90vw;
+  }
+  div.contact-form div.image-container {
+    display: flex;
+    height: 500px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  div.contact-form div.image-container img {
+    position: relative;
+    left: 70px;
+  }
+  div.contact-form form {
+    padding-top: 100px;
+  }
+  div.contact-form form input {
+    background-color: transparent;
+    width: clamp(180px, 90vw, 500px);
+    height: 40px;
+  }
+  div.contact-form form textarea {
+    width: clamp(200px, 90vw, 500px);
+  }
+}

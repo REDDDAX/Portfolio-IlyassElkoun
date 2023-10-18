@@ -1,0 +1,117 @@
+
+
+
+@keyframes text-one {
+  0% {
+    content: "9%$#@!*{}+=_"
+    
+  }
+  2% {
+    content: "3a623ygrnb9%$";
+    
+  }
+  3% {
+    content: "tLTJCSQPLwD9";
+    
+  }
+  4% {
+    content: "6klJCSQPLwD9";
+    
+  }
+
+  10% {
+    content: "$LTJCSQPLwD9";
+  }
+  15% {
+    content: "9%$#@!*{}+=3";
+  }
+
+  20% {
+    content: "&e8Txr1imIby";
+  }
+  25% {
+    content: "K5xdRQ<H3%1G";
+  }
+
+  30% {
+    content: "{eboFFiCV2Vx";
+  }
+  35% {
+    content: "a*:;1Nu0o;?3";
+  }
+
+  40% {
+    content: "h&! f9%$#@!*";
+  }
+  45% {
+    content: "zkHcL&>m&-J{";
+  }
+
+  50% {
+    content: "W*s %3a62ilgr";
+  }
+  53% {
+    content: "W^$ h2e9@d=1{";
+  }
+  55% {
+    content: "We) %3a62ilgr";
+  }
+
+  57% {
+    content: "Web *9%$#@w";
+  }
+  60% {
+    content: "Web D9%$#@w";
+  }
+
+  62% {
+    content: "Web De&9%#@!";
+  }
+  65% {
+    content: "Web Dev*d_=!";
+  }
+
+  70% {
+    content: "Web DeveAVwd";
+  }
+
+  75% {
+    content: "Web DevelocF2";
+  }
+
+  80% {
+    content: "Web DevelopO2";
+  }
+  85% {
+    content: "Web Develop$+";
+  }
+
+  95% {
+    content: "Web Developef";
+  }
+  100% {
+    content: "Web Developer";
+  }
+/* ? */
+  
+}
+
+@keyframes reflection{
+0%{
+  left: -90px;
+}
+100%{
+  left: 200px;
+}
+}
+
+@keyframes beforeAfterAnimation {
+  0%{
+    top: 20px;
+    opacity: 0;
+    
+  }
+  100%{
+    top: 50px;
+  }
+}
