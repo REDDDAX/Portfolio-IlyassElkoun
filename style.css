@@ -39,14 +39,7 @@ body {
     linear-gradient(to right, #1a1a1a 1px, #000000 1px);
   background-size: 20px 20px;
 }
-body::before {
-  content: "";
-  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.201));
-  height: 100px;
-  width: 100%;
-  position: absolute;
-  top: 720px;
-}
+
 header {
   position: relative;
 }
@@ -126,7 +119,7 @@ ul a::after {
   content: "";
   position: absolute;
   background-color: black;
-  background-color: var(--bottom-border-color);
+  background-color: var(--box-shadow-changed);
   width: 100%;
   height: 2px;
   transform: scale(0, 1);
@@ -162,7 +155,16 @@ main {
   /* scroll-snap-align: start; */
   background-color: var(--background-color);
 }
-
+main img.moon-image{
+  position: absolute;
+  width: 340px;
+  height: 300px;
+  top: 0;
+  left: clamp(100px, 30vw, 500px);
+  opacity: 1;
+  rotate: 180deg;
+  animation: moon-rise 1.5s ease-in-out;
+}
 main img {
   height: 100%;
   width: 100%;
@@ -322,6 +324,15 @@ main div:nth-child(2) {
     scroll-snap-align: start; 
     transition: 10s; 
 } */
+
+section.about-me::before {
+  content: "";
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.201));
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
 section {
   padding: 100px 0;
 }
@@ -336,6 +347,7 @@ section.about-me {
   justify-content: center;
   margin: 0;
   gap: 50px;
+  position: relative;
 }
 section .section-title {
   text-transform: uppercase;
@@ -429,7 +441,11 @@ section.about-me .bio-picture img {
 
   padding: 0 30px;
 }
-
+section#skills {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 div.experience-container {
   height: 100%;
   width: 100%;
@@ -443,7 +459,7 @@ div.tech-stack-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 div.tech-stack-wrapper div {
   display: flex;
@@ -463,6 +479,7 @@ div.tech-stack-wrapper span.title {
   padding-right: 20px;
   margin-right: 10px;
   border-right: solid var(--accent-color-red) 2px;
+ 
 }
 div.tech-stack-wrapper span {
   margin: 0;
@@ -562,21 +579,6 @@ div.tech-stack-wrapper
   width: 50px;
 }
 
-/*before--------------------------*/
-/* div.tech-stack-wrapper div:nth-of-type(1) span::before{
-  position: absolute;
-  background-color: white;
-  width: fit-content;
-  text-transform: uppercase;
-  z-index: 88;
-  top: 50px;
-  padding: 10px;
-  border-radius: 10px;
-  color: var(--accent-color-red);
-  font-weight: bold;
-  
-} */
-
 div.tech-stack-wrapper .skills-info:nth-of-type(1) {
   position: absolute;
 
@@ -635,7 +637,112 @@ div.tech-stack-wrapper .skills-info:before {
   rotate: 45deg;
 }
 
-/*before-----------*/
+
+
+
+
+
+
+
+
+div.what-i-do{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+
+div.what-i-do span.title h4 {
+  color: var(--accent-color-red);
+  font-size: 20px;
+  text-transform: capitalize;
+ 
+}
+div.what-i-do span.title {
+  padding: 0px;
+  margin: 0px;
+  width: fit-content;
+  border-bottom: solid var(--accent-color-red) 2px;
+}
+div.what-i-do .skill-wrapper{
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+div.what-i-do div.skills-frame{
+  width: 270px;
+  height: 240px;
+  background-color: rgb(21, 21, 21);
+ 
+  border-radius: 3px;
+  box-shadow: var(--accent-color-red) 1px 1px,
+  var(--accent-color-red) 2px 2px,
+  var(--accent-color-red) 3px 3px,
+  var(--accent-color-red) 4px 4px,
+  var(--accent-color-red) 5px 5px,
+  var(--accent-color-red) 6px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+  transition: .4s;
+}
+div.what-i-do div.skills-frame:hover{
+ 
+
+ cursor:default;
+  
+  /* box-shadow: var(--accent-color-red) 0px 0px; */
+  
+}
+div.what-i-do div.skills-frame i{
+  color: white;
+  font-size: 30px;
+}
+div.what-i-do div.skills-frame h4{
+  font-size: 22px;
+}
+div.what-i-do div.skills-frame p{
+  font-size: 13px;
+  line-height: 13px;
+  width: 80%;
+  text-align: left;
+}
+div.what-i-do div.skills-frame i,
+div.what-i-do div.skills-frame h4,
+div.what-i-do div.skills-frame p,
+div.skills-frame button.learn-more{
+  margin-left:35px;
+}
+
+div.what-i-do div.skills-frame button.learn-more{
+  height: 30px;
+  background-color: var(--accent-color-red);
+  border: none;
+  color: white;
+cursor: pointer;
+transition: .4s;
+border-radius: 3px;
+margin-top: 10px;
+}
+div.what-i-do div.skills-frame button.learn-more:hover{
+  background-color: #f25879;
+  border: none;
+  color: white;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 hr {
   width: 80%;

@@ -45,14 +45,13 @@ const section = document.querySelectorAll("section")
 window.addEventListener("scroll", () => {
     // (window.scrollY)
     const scrollchange = scrollY;
-    console.log(scrollY);
 
     if (scrollchange > 5) {
         nav.style.backgroundColor = "black";
         nav.style.boxShadow = "10px 0 10px rgb(55, 55, 55)";
         nav.style.transition = ".3s";
         document.documentElement.style.cssText = "--bottom-border-color: #C5264C";
-        document.documentElement.style.cssText = "--box-shadow-changed: #C5264C"
+        document.documentElement.style.cssText = "--box-shadow-changed: #C5264C";
 
         // document.querySelector(":root").style.setProperty('--bottom-border-color','white')
 
